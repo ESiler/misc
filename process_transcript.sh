@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#####################################
+##############################################
 # README
 #
 # This script takes a Zoom transcript file and consolidates the
@@ -9,23 +9,30 @@
 # soundbites from the same person and puts them together. 
 #
 # By Eleanor Siler, 27 Feb 2024
-
-# How to Use:
 #
-# Open your bash terminal, navigate to the file with your transcript, and type the following line,
-# replacing the sample_Recording... with your recording name, and sample_output.txt with what you
-# want your consolidated output file to be called. 
-#
-# ./process_transcript.txt sample_Recording.transcript.vtt sample_output.txt
-#
-# This will work if your filenames are correct and your transcript, and you are all in the same file/directory.
-# If this isn't true, either change the filenames appropriately or move stuff 
-# So everything is in the same file.
-#
-# Usage for more experienced ppl:
+# Usage (more experienced people version):
 # ./process_transcript.sh -input_file -output_file
+# 
+# Usage (step by step version):
+# 1. Download this .sh file into to the file as your Zoom transcript
+# 2. Open your bash terminal, 
+# 3. Navigate to the file with your transcript and this shell script, and 
+# 4. type the following line:
 #
-#####################################
+# > chmod +x process_transcript.sh
+# 
+# 5. Now run the following line, replacing the sample_Recording... with your recording name, 
+#    and sample_output.txt with the name you want for your output file:
+
+# >./process_transcript.txt sample_Recording.transcript.vtt sample_output.txt
+#
+# 6. Open your new outputed file and enjoy.
+#
+# My boss gave me a hard time about this readme being too long/being in a weird place
+# but I wrote it for my social sciences friend so cut me some slack, geeze. 
+#
+###############################################
+
 input_file="$1"
 output_file="$2"
 
@@ -53,4 +60,3 @@ END {
     close(output)
 }
 '
-
